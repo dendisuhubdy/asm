@@ -1,6 +1,6 @@
 all:
-	nasm -f elf64 -o sum.o sum.asm
-	ld -o sum sum.o
+	nasm -f macho64 -o sum.o sum.asm
+	ld -o sum -e _start sum.o
 
 clean:
 	rm sum sum.o
